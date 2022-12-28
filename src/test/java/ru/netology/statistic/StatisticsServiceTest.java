@@ -1,32 +1,33 @@
 package ru.netology.statistic;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-    public class StatisticsServiceTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-        @Test
-        public void findMax() {
-            StatisticsService service = new StatisticsService();
+public class StatisticsServiceTest {
 
-            long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
-            long expected = 12;
+    @Test
+    public void findMax() {
+        StatisticsService service = new StatisticsService();
 
-            long actual = service.findMax(incomesInBillions);
+        long[] incomesInBillions = {12, 5, 8, 4, 5, 3, 8, 6, 11, 11, 12};
+        long expected = 12;
 
-            assertEquals(expected, actual);
-        }
+        long actual = service.findMax(incomesInBillions);
 
-        @Test
-        public void findMaxFromCenter() {
-            StatisticsService service = new StatisticsService();
-
-            long[] incomesInBillions = {12, 5, 8, 45, 5, 3, 8, 6, 11, 11, 12};
-            long expected = 45;
-
-            long actual = service.findMax(incomesInBillions);
-
-            assertEquals(expected, actual);
-        }
+        assertEquals(expected, actual);
     }
+
+    @Test
+    public void findMaxFromCenter() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {12, 5, 8, 45, 5, 3, 8, 6, 11, 11, 12};
+        long expected = 45;
+
+        long actual = service.findMax(incomesInBillions);
+
+        assertEquals(expected, actual);
+    }
+}
 
